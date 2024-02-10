@@ -1,0 +1,50 @@
+.card-header h5 {
+    margin-bottom: 0;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .post-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  .post-details {
+    margin-bottom: 10px;
+  }
+  
+  .action-buttons button {
+    margin-right: 10px;
+  }
+  
+  .no-posts-message {
+    margin-top: 20px;
+  }
+  
+  .pagination-controls {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .pagination-controls button {
+    margin: 0 5px;
+  }
+  
+  
+  .no-posts-message {
+    margin-top: 20px;
+  }
+  
+  .pagination-controls {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .pagination-controls button {
+    margin: 0 5px;
+  }
+  

@@ -1,0 +1,19 @@
+<div *ngIf="post" class="post-details">
+    <h2 class="post-title">{{ post.title }}</h2>
+    <p><strong>User ID:</strong> {{ post.userId }}</p>
+    <p><strong>ID:</strong> {{ post.id }}</p>
+    <p><strong>Title:</strong> {{ post.title }}</p>
+    <p><strong>Body:</strong></p>
+    <p class="post-body">{{ post.body }}</p>
+  
+    <h3 class="comments-heading">Comments</h3>
+    <div class="comments-list">
+      <div *ngFor="let comment of comments" class="comment-item">
+        <div class="comment-header">
+          <strong class="comment-name">{{ comment.name }}</strong> ({{ comment.email }})
+        </div>
+        <div class="comment-body">{{ comment.body }}</div>
+      </div>
+    </div>
+  </div>
+  

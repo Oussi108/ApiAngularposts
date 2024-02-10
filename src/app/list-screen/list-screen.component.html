@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title mb-0">Post List</h5>
+          </div>
+          <div class="card-body">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" [(ngModel)]="searchTerm" placeholder="Search posts by IdUser...">
+              <div class="input-group-append">
+                <button class="btn btn-outline-primary" type="button" (click)="searchPosts()">Search</button>
+              </div>
+            </div>
+            <hr>
+            <div *ngIf="totalPosts > 0">
+              <div *ngFor="let post of paginatedPosts" class="post-item">
+                <div class="post-details">
+                  <div><strong>User ID:</strong> {{ post.userId }}</div>
+                  <div><strong>ID:</strong> {{ post.id }}</div>
+                  <div><strong>Title:</strong> {{ post.title }}</div>
+                </div>
+                <div class="action-buttons">
+                  <button class="btn btn-primary" (click)="showPostDetails(post)">Detail</button>
+                  <button class="btn btn-danger" (click)="deletePost(post.id)">Delete</button>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="totalPosts === 0" class="no-posts-message text-center">
+              No posts found.
+            </div>
+          </div>
+          <div class="pagination-controls">
+            <button *ngFor="let page of totalPages" (click)="onPageChange(page)" [class.active]="currentPage === page" class="btn btn-outline-primary">{{ page }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
